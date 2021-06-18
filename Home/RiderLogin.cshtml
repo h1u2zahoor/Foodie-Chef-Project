@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "RiderLogin";
+}
+
+<head>
+    <title>Rider | Login</title>
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css" />
+    <script type="text/javascript">
+        function validate() {
+            var pass = document.getElementById("psw");
+            if (pass.value.length < 8) {
+                alert("Password length must be 8 characters or more!");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <div>
+
+            <div id="container2" style="width: 50%; float: left">
+                <div class="box">
+                    <div class="centered">
+                        <h style="font-size:200%"><b>Welcome To FoodieChef</b></h><br>
+                        <q>My body is a temple where junk food goes to worship</q>
+                    </div>
+
+                </div>
+                <!--<img src="C:\Users\user\Desktop\Database\WebApplication2\WebApplication2\photo-1490818387583-1baba5e638af.jpg" height=650 width=650>-->
+            </div>
+
+
+
+            <form onsubmit="return validate()" method="post" action="../Home/authenticateRider">
+                <div class="container4">
+                    <div class="centered4">
+                        <h style="font-size:200% ; color: black"><b>&nbsp;&nbsp;&nbsp; Rider Login </b></h>
+                    </div>
+                    <label for="uname"><b>Username</b></label><br />
+                    <input type="text" placeholder="Enter Username" id="uname" name="uname" required><br />
+
+                    <label for="psw"><b>Password</b></label><br />
+                    <input type="password" placeholder="Enter Password" id="psw" name="psw" required><br />
+
+                    <button type="submit">Login</button><br />
+                    Remember me<input type="checkbox" id="remember" checked="checked" style="width: 10%"><br /><br />
+
+                    New on the Site? Register   @Html.ActionLink("Here", "RiderSignup", "Home")<br /><br /><br />
+
+                </div>
+            </form>
+        </div>
+    </header>
+
+</body>
+

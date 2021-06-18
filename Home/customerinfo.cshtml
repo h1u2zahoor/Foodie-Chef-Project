@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using WebApplication8.Models;
+@model List<User>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>customerinfo</title>
+</head>
+<body style="background-color: black ; color: white ;margin: auto">
+    <div style="height: 25% " >
+        <img src="~/Content/Customer-Voice-banner.jpg" height="300" width="1360">
+    </div>
+    <div1 >
+        <center><h style="text-align: center ; font-size: x-large"><u>CUSTOMERS</u></h></center><br>
+        <table border="1" bordercolor="white"   style="width: 100%">
+            <thead><tr><td>User ID</td> <td>Name</td> <td>Address</td></tr></thead>
+            @foreach (User user in Model)
+            {
+        <tr>
+            <td style="color: white">@user.userId</td>
+            <td> @user.name</td>
+            <td> @user.address</td>
+        </tr>
+            }
+        </table>
+     </div1>
+
+</body>
+</html>

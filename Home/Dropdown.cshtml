@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Dropdown";
+}
+
+    <head>
+        <title>Dropdown</title>
+        <link rel="stylesheet" href="~/Content/StyleSheet1.css" />
+        <script type="text/javascript">
+            function getSelectedValue() {
+                var list = document.getElementById("<%=list.Id %>");
+                var text = list.options[list.selectedIndex].innerHTML;
+                return text;
+        }
+        </script>
+    </head>
+<body>
+
+    <header>
+        <div>
+
+            <div id="container2" style="width: 50%; float: left">
+                <div class="box">
+                    <div class="centered">
+                        <h style="font-size:200%"><b>Welcome To FoodieChef</b></h><br>
+                        <q>My body is a temple where junk food goes to worship</q>
+                    </div>
+
+                </div>
+                <!--<img src="C:\Users\user\Desktop\Database\WebApplication2\WebApplication2\photo-1490818387583-1baba5e638af.jpg" height=650 width=650>-->
+            </div>
+
+
+
+            <form action="../Home/authenticate2" method="post">
+                <div class="container4">
+                    <div class="centered4">
+                        <h style="font-size:200% ; color: black"><b>&nbsp;&nbsp;&nbsp; Login As </b></h>
+                    </div>
+                    <b>Select as whom do you want to log in?</b><br /><br />
+                    <select id="list" name="list">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="rider">Rider</option>
+
+                    </select>
+
+                   <br /> <br/><input type="submit" value="Submit">
+
+                    <br /><br /><br />
+
+                </div>
+            </form>
+        </div>
+    </header>
+
+</body>
+
